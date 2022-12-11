@@ -1,0 +1,2 @@
+git+ssh://git@github.com/mawdoo3/microservice@v3.0.0#egg=microservice
+-e .

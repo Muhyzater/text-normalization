@@ -1,0 +1,16 @@
+syntax = "proto2";
+import "google/protobuf/any.proto";
+
+service text_normalization {
+  rpc normalize(TNRequest) returns (TNResponse);
+}
+
+message TNRequest {
+  required string text = 1;
+  optional bool advanced = 2 [default = false];
+  optional bool parse_ssml = 3 [default = false];
+}
+
+message TNResponse {
+  required string text = 1;
+}
